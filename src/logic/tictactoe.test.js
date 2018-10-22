@@ -3,5 +3,5 @@
 const tictactoe = require('./tictactoe');
 
 test("returns hello", () => {
-	expect(tictactoe()).toBe("Hello");
+	expect(tictactoe("bro")).toBe("Hello, bro!");
 });

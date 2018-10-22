@@ -1,7 +1,7 @@
 //tictactoe.js
 
-function tictactoe() {
-	return "Hello";
+function tictactoe(name) {
+	return "Hello, " + name + "!";
 }
 
 module.exports = tictactoe;
