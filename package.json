@@ -1,0 +1,22 @@
+{
+  "name": "tictactoe-hugb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MysteryGang/tictactoe-hugb.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MysteryGang/tictactoe-hugb/issues"
+  },
+  "homepage": "https://github.com/MysteryGang/tictactoe-hugb#readme",
+  "devDependencies": {
+    "jest": "^23.6.0"
+  }
+}
