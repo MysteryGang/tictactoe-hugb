@@ -12,17 +12,21 @@ function cellClicked(){
     for (var i = 0; i < cells.length; i++) { 
 		cells[i].onclick = function(){
             // check if cell already clicked
-
-            // update HTML
-            fetch("/api/cellclick")
+            var cellid = (this).id;
+            fetch("/api/postCell/" + cellid)
             .then(res => res.text())
-            .then(body => {
-                if((this).innerHTML == 'X' || (this).innerHTML == 'O') {
-                    return;
+            .then(body => { 
+                if(body == "false") { // if cell is not already clicked, then execute /api/cellclick
+                    // update HTML
+                    fetch("/api/cellclick/" + cellid)
+                    .then(res => res.text())
+                    .then(body => {
+                        (this).innerHTML = body;
+                    });
                 }
-                (this).innerHTML = body;
             });
+            
+            // checkWinner 
 		}
     }
-    // check if winner or draw <---
 }

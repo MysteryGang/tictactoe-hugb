@@ -1,14 +1,26 @@
 //tictactoe.js
 
 var playerTurn = 1; // player X or player O turn
+var board = ["", "", "", "", "", "", "", "", ""];
 
 var checkCell = function(cellid){
-	return cellid; // <--- implement
+	
+	var id = cellid.match(/\d/)[0];
+	id = Number(id) - 1;
+
+	if(board[id] == "X" || board[id] == "O"){
+		return "true";
+	}	
+	return "false";
 }
 
-var currentPlayer = function(){
+var currentPlayer = function(cellid){
 	
+	var id = cellid.match(/\d/)[0] ;
+	id = Number(id) - 1;
+
 	var player = returnCurrentPlayer(playerTurn);
+	board[id] = player;
 	playerTurn++;
 	return player;
 }
