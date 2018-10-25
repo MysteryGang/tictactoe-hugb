@@ -18,3 +18,14 @@ describe("GET /cellclick endpoint", () => {
 		expect(ttt.currentPlayer()).toBe("O");
 	});
 });
+
+describe("GET /postCell endpoint", () => {
+	it("should return a 200 OK status code", async () => {
+		const res = await request(api).post("/postCell");
+		expect(res.status).toBe(200);
+	});
+    it("should return current player X", async () => {
+		const res = await request(api).get("/postCell");
+		expect(ttt.checkCell("1")).toBe("1"); // <--- implement
+    });
+});

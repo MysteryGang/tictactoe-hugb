@@ -1,16 +1,6 @@
 //tictactoe.js
 
-var board;
 var playerTurn = 1; // player X or player O turn
-
-var initialize = function(){
-	board = [          //[row][col]
-  	["", "", ""],
-  	["", "", ""],
-  	["", "", ""]
-	];
-	return board;
-}
 
 var currentPlayer = function(){
 	
@@ -32,4 +22,3 @@ var returnCurrentPlayer = function(turnNumber){
 
 module.exports.currentPlayer = currentPlayer;
 module.exports.returnCurrentPlayer = returnCurrentPlayer;
-module.exports.initialize = initialize;
