@@ -2,6 +2,10 @@
 
 var playerTurn = 1; // player X or player O turn
 
+var checkCell = function(cellid){
+	return cellid; // <--- implement
+}
+
 var currentPlayer = function(){
 	
 	var player = returnCurrentPlayer(playerTurn);
@@ -21,3 +25,5 @@ var returnCurrentPlayer = function(turnNumber){
 }
 
 module.exports.currentPlayer = currentPlayer;
+module.exports.returnCurrentPlayer = returnCurrentPlayer;
+module.exports.checkCell = checkCell;
