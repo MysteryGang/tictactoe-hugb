@@ -1,7 +1,6 @@
 // tictactoe.test.js
+const ttt = require('./tictactoe');
 
-const tictactoe = require('./tictactoe');
-
-test("returns hello", () => {
-	expect(tictactoe("bro")).toBe("Hello, bro!");
+test("returns player 'X'", () => {
+	expect(ttt.currentPlayer(1)).toBe("X");
 });
