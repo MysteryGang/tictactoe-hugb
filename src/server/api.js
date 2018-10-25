@@ -13,6 +13,7 @@ router.get("/cellclick", (req, res) => {
 
 router.get("/initialize", (req, res) => {
     res.status(200).send(ttt.initialize());
+});
 
 router.post("/postCell", (req, res) => {
     res.status(200).send(ttt.checkCell(req.body.cellID));
