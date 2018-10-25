@@ -1,4 +1,6 @@
 // index.js
+const fetch = require('node-fetch');
+
 document.addEventListener('DOMContentLoaded', init, false);
 
 function init() { 
@@ -12,7 +14,7 @@ function cellClicked(){
     for (var i = 0; i < cells.length; i++) { 
 		cells[i].onclick = function(){
             // check if cell already clicked
-            
+
             // update HTML
             fetch("/api/cellclick")
             .then(res => res.text())
