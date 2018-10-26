@@ -20,13 +20,13 @@ describe("GET /cellclick endpoint", () => {
 
 describe("GET /currentPlayer endpoint", () => {
 	it("should return a 200 OK status code", async () => {
-		const res = await request(api).get("/currentPlayer/1");
+		const res = await request(api).get("/currentPlayer");
 		expect(res.status).toBe(200);
 	});
-    /*it("should return current player X", async () => {
-		const res = await request(api).get("/cellClick");
-		expect(ttt.cellClick("2")).toBe("O"); // next player is O since in last test it was X
-	});*/
+  it("should return current player X", async () => {
+		const res = await request(api).get("/currentPlayer");
+		expect(ttt.cellClick("2")).toBe("O");
+	});
 });
 
 describe("GET /checkCell endpoint", () => {
