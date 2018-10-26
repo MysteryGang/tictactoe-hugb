@@ -8,7 +8,7 @@ router.get("/initializeBoard/", (req, res) => {
 });
 
 router.get("/cellClick/:cellid", (req, res) => {
-    res.status(200).send(ttt.currentPlayer(req.params.cellid));
+    res.status(200).send(ttt.cellClick(req.params.cellid));
 });
 
 router.get("/checkCell/:cellid", (req, res) => {

@@ -19,7 +19,7 @@ var checkCell = function(cellid){
 	return "false";
 }
 
-var currentPlayer = function(cellid){
+var cellClick = function(cellid){
 	
 	var id = getId(cellid);
 	var player = returnCurrentPlayer(playerTurn);
@@ -88,7 +88,7 @@ var checkForWinner = function() {
 	return winner + " wins";
 }
 
-module.exports.currentPlayer = currentPlayer;
+module.exports.cellClick = cellClick;
 module.exports.returnCurrentPlayer = returnCurrentPlayer;
 module.exports.checkCell = checkCell;
 module.exports.getId = getId;
