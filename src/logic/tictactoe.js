@@ -36,10 +36,11 @@ var returnCurrentPlayer = function(turnNumber){
 
 var getId = function (cellid){
 	var id = cellid.match(/\d/)[0];
-	id = Number(id) - 1;
+	id = Number(id) - 1; //-1 to get correct index to put in array
 	return id;
 }
 
 module.exports.currentPlayer = currentPlayer;
 module.exports.returnCurrentPlayer = returnCurrentPlayer;
 module.exports.checkCell = checkCell;
+module.exports.getId = getId;

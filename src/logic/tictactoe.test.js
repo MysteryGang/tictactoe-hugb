@@ -13,6 +13,17 @@ test("returns false", () => {
 	expect(ttt.checkCell("1")).toBe("false");
 });
 
+test("returns id of cell", () => {
+	expect(ttt.getId("cell-1")).toBe(0);
+});
+
+test("returns id of cell", () => {
+	expect(ttt.getId("cell-2")).toBe(1);
+})
+
+
+
+
 /*test("returns false", () => {
 	ttt.checkCell("1");
 	expect(ttt.checkCell("1")).toBe("true");
