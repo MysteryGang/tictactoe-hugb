@@ -24,3 +24,14 @@ test("returns id of cell", () => {
 test("return message when called", () => {
 	expect(ttt.initializeBoard()).toBe("board initialized");
 });
+
+test("returns correct winner", () => {
+	var board = ['X', 'O', 'O', 'X', 'O', '', 'X', '', ''];
+	expect(ttt.winner(board)).toBe('X wins');
+});
+
+test("returns draw", () => {
+	var board = ['X', 'O', 'X', 'X', 'O', 'O', 'O', 'X', 'X'];
+	var playerTurn = 10;
+	expect(ttt.winner(board, playerTurn)).toBe('draw');
+})

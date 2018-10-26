@@ -9,6 +9,7 @@ function init() {
     initializeBoard();
     // execute when a cell is clicked
     cellClicked();
+    newGame();
 }
 
 function cellClicked(){
@@ -40,7 +41,7 @@ function cellClicked(){
                             winnerMessage.innerHTML = body;
                         });
 
-                        // update player turn message
+               // update player turn message
                         fetch("api/currentPlayer")
                         .then(res => res.text())
                         .then(body => {
@@ -56,11 +57,14 @@ function cellClicked(){
 
 function initializeBoard() {
 
-    console.log('hi');
-
     fetch("/api/initializeBoard/")
-    .then(res => res.text())
-    .then(body => {
-        console.log(body);
-    });
+}
+
+function newGame() {
+    var button = document.getElementById('new-game-button');
+
+    button.onclick = function () {
+        console.log('button clicked');
+        window.location.reload();
+    }
 }
