@@ -10,7 +10,7 @@ var initializeBoard = function() {
 }
 
 var checkCell = function(cellid){
-	
+
 	var id = getId(cellid);
 
 	if(board[id] == "X" || board[id] == "O"){
@@ -46,12 +46,8 @@ var getId = function (cellid){
 	return id;
 }
 
-var checkForWinner = function() {
-
+var winner = function (board, playerTurn) {
 	var winner = "";
-	if(playerTurn === 10) {
-		return "draw";
-	}
 	if(board[0] === board[1] && board[1] === board[2]) {
 		winner = board[0];
 	}
@@ -82,10 +78,17 @@ var checkForWinner = function() {
 	else if(board[2] === board[4] && board[4] === board[6]) {
 		winner = board[2];
 	}
-	if(winner === '') {
-		return '';
+	if(winner !== '') {
+		return winner + " wins";
 	}
-	return winner + " wins";
+	if(playerTurn === 10) {
+		return "draw";
+	}
+	return winner;
+}
+var checkForWinner = function() {
+	return winner(board, playerTurn);
+	
 }
 
 module.exports.currentPlayer = currentPlayer;
@@ -94,3 +97,4 @@ module.exports.checkCell = checkCell;
 module.exports.getId = getId;
 module.exports.initializeBoard = initializeBoard;
 module.exports.checkForWinner = checkForWinner;
+module.exports.winner = winner;

@@ -10,6 +10,7 @@ function init() {
 
     // execute when a cell is clicked
     cellClicked();
+    newGame();
 }
 
 function cellClicked(){
@@ -46,7 +47,7 @@ function cellClicked(){
 
                         });
 
-                        
+
                     }
                 });
 
@@ -57,11 +58,14 @@ function cellClicked(){
 
 function initializeBoard() {
 
-    console.log('hi');
-
     fetch("/api/initializeBoard/")
-    .then(res => res.text())
-    .then(body => {
-        console.log(body);
-    });
+}
+
+function newGame() {
+    var button = document.getElementById('new-game-button');
+
+    button.onclick = function () {
+        console.log('button clicked');
+        window.location.reload();
+    }
 }
