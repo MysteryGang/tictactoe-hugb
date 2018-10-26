@@ -15,4 +15,8 @@ router.get("/checkCell/:cellid", (req, res) => {
     res.status(200).send(ttt.checkCell(req.params.cellid));
 });
 
+router.get("/checkWinner", (req, res) => {
+	res.status(200).send(ttt.checkForWinner());
+})
+
 module.exports = router;
