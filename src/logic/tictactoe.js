@@ -5,8 +5,7 @@ var board = ["", "", "", "", "", "", "", "", ""];
 
 var checkCell = function(cellid){
 	
-	var id = cellid.match(/\d/)[0];
-	id = Number(id) - 1;
+	var id = getId(cellid);
 
 	if(board[id] == "X" || board[id] == "O"){
 		return "true";
@@ -16,10 +15,9 @@ var checkCell = function(cellid){
 
 var currentPlayer = function(cellid){
 	
-	var id = cellid.match(/\d/)[0] ;
-	id = Number(id) - 1;
-
+	var id = getId(cellid);
 	var player = returnCurrentPlayer(playerTurn);
+
 	board[id] = player;
 	playerTurn++;
 	return player;
@@ -34,6 +32,12 @@ var returnCurrentPlayer = function(turnNumber){
 		player = "O";
 	}
 	return player;
+}
+
+var getId = function (cellid){
+	var id = cellid.match(/\d/)[0];
+	id = Number(id) - 1;
+	return id;
 }
 
 module.exports.currentPlayer = currentPlayer;
