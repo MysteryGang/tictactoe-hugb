@@ -19,12 +19,8 @@ test("returns id of cell", () => {
 
 test("returns id of cell", () => {
 	expect(ttt.getId("cell-2")).toBe(1);
-})
+});
 
-
-
-
-/*test("returns false", () => {
-	ttt.checkCell("1");
-	expect(ttt.checkCell("1")).toBe("true");
-});*/
+test("return message when called", () => {
+	expect(ttt.initializeBoard()).toBe("board initialized");
+});

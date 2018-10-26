@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', init, false);
 
 function init() { 
     // execute when a cell is clicked
+    initializeBoard();
     cellClicked();
 }
 
@@ -32,4 +33,15 @@ function cellClicked(){
             // checkWinner 
 		}
     }
+}
+
+function initializeBoard() {
+
+    console.log('hi');
+
+    fetch("/api/initializeBoard/")
+    .then(res => res.text())
+    .then(body => {
+        console.log(body);
+    });
 }

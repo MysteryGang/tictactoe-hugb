@@ -33,3 +33,15 @@ describe("GET /checkCell endpoint", () => {
 		expect(ttt.checkCell("6")).toBe("true");
     });
 });
+
+describe("GET /initializeBoard endpoint", () => {
+	it("should return a 200 OK status code", async () => {
+		const res = await request(api).get("/initializeBoard");
+		expect(res.status).toBe(200);
+	});
+
+	it("should return board initialized message when called", async () => {
+		const res = await request(api).get("/initializeBoard");
+		expect(ttt.initializeBoard()).toBe("board initialized");
+	})
+})

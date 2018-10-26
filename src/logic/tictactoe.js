@@ -3,6 +3,12 @@
 var playerTurn = 1; // player X or player O turn
 var board = ["", "", "", "", "", "", "", "", ""];
 
+var initializeBoard = function() {
+	board = ["", "", "", "", "", "", "", "", ""];
+	playerTurn = 1;
+	return 'board initialized';
+}
+
 var checkCell = function(cellid){
 	
 	var id = getId(cellid);
@@ -44,3 +50,4 @@ module.exports.currentPlayer = currentPlayer;
 module.exports.returnCurrentPlayer = returnCurrentPlayer;
 module.exports.checkCell = checkCell;
 module.exports.getId = getId;
+module.exports.initializeBoard = initializeBoard;
