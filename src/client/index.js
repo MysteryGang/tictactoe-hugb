@@ -37,8 +37,14 @@ function cellClicked(){
                          fetch("/api/checkWinner")
                         .then(res => res.text())
                         .then(body => { 
-                            console.log(body);
                             winnerMessage.innerHTML = body;
+                        });
+
+                        // update player turn message
+                        fetch("api/currentPlayer")
+                        .then(res => res.text())
+                        .then(body => {
+                            turnMessage.innerHTML = body + ", it's your turn!";
                         });
                     }
                 });

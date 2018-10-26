@@ -11,6 +11,10 @@ router.get("/cellClick/:cellid", (req, res) => {
     res.status(200).send(ttt.cellClick(req.params.cellid));
 });
 
+router.get("/currentPlayer", (req, res) => {
+    res.status(200).send(ttt.currentPlayer());
+});
+
 router.get("/checkCell/:cellid", (req, res) => {
     res.status(200).send(ttt.checkCell(req.params.cellid));
 });
