@@ -2,10 +2,12 @@
 
 var playerTurn = 1; // player X or player O turn
 var board = ["", "", "", "", "", "", "", "", ""];
+var isWinner = false;
 
 var initializeBoard = function() {
 	board = ["", "", "", "", "", "", "", "", ""];
 	playerTurn = 1;
+	isWinner = false;
 	return 'board initialized';
 }
 
@@ -21,12 +23,15 @@ var checkCell = function(cellid){
 
 var cellClick = function(cellid){
 	
-	var id = getId(cellid);
-	var player = returnCurrentPlayer(playerTurn);
+	if(!isWinner){
+		var id = getId(cellid);
+		var player = returnCurrentPlayer(playerTurn);
 
-	board[id] = player;
-	playerTurn++;
-	return player;
+		board[id] = player;
+		playerTurn++;
+		return player;
+	}
+	return "";
 }
 
 var currentPlayer = function(){
@@ -87,7 +92,11 @@ var winner = function (board, playerTurn) {
 }
 var checkForWinner = function() {
 	return winner(board, playerTurn);
-	
+}
+
+var registerWinner = function() {
+	isWinner = true;
+	return isWinner;
 }
 
 module.exports.cellClick = cellClick;
@@ -98,3 +107,4 @@ module.exports.getId = getId;
 module.exports.initializeBoard = initializeBoard;
 module.exports.checkForWinner = checkForWinner;
 module.exports.winner = winner;
+module.exports.registerWinner = registerWinner;
