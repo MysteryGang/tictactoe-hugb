@@ -25,7 +25,7 @@
 ##### * node-fetch
 
 
-#### Heroku steps:
+### Heroku steps:
 
 ##### 1. Sign up on Heroku here --> https://signup.heroku.com/
 ##### 2. Set up Heroku Toolbelt
