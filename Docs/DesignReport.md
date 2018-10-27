@@ -35,4 +35,4 @@ The team used markdown syntax in the documentation. The documentation reports ar
 
 ### Other
 
-While the team was getting used to the GitHub environment it was decided to use an old repository to practice. Some of the team members had never used GitHub. With this method we made sure that no unnecessary files were in the repository that was shared with hap2000.
+While the team was getting used to the GitHub environment it decided to use an old repository to practice. Some of the team members had never used GitHub. With this method we made sure that no unnecessary files were in the repository that was shared with hap2000.

@@ -6,7 +6,7 @@
 
 2. Developer needs to install these dependencies
 
-##### developer dependencies
+#### developer dependencies
 
 command "install <name of dependency> --save-dev"
 
@@ -18,7 +18,7 @@ command "install <name of dependency> --save-dev"
 - webpack-cli
 - webpack-dev-server
   
-##### dependencies
+#### dependencies
 
 ##### command "install <name of dependency> --save"
 - express
@@ -29,5 +29,5 @@ command "install <name of dependency> --save-dev"
 
 1. Sign up on Heroku here --> https://signup.heroku.com/
 2. Set up Heroku Toolbelt
-3. Sign in to Heroku usint the Toolbelt
+3. Sign in to Heroku using the Toolbelt
 4. Follow these steps -->https://devcenter.heroku.com/categories/nodejs-support
