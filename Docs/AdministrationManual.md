@@ -11,8 +11,8 @@
 #### 7. Administrator needs to install these dependencies:
 
 #### command "install <name of dependency> --save"
-#### * express
-#### * node-fetch
+#### - express
+#### - node-fetch
 
 #### 8. To play the game ........ skrifa meira hér
 
