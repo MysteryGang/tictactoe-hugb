@@ -6,9 +6,9 @@
 
 #### 2. Developer needs to install these dependencies
 
-#####developer dependencies
+##### developer dependencies
 
-#####command "install <name of dependency> --save-dev"
+##### command "install <name of dependency> --save-dev"
 
 ##### * clean-webpack-plugin
 ##### * html-webpack-plugin
@@ -18,9 +18,9 @@
 ##### * webpack-cli
 ##### * webpack-dev-server
   
-#####dependencies
+##### dependencies
 
-#####command "install <name of dependency> --save"
+##### command "install <name of dependency> --save"
 ##### * express
 ##### * node-fetch
 
