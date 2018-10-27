@@ -14,4 +14,4 @@
 
 ###6: Go to the path where you saved the repository by typing the command cd exampleFolderName into Git bash or Terminal on Mac. If you are lost you can see where you currently are by typing in the command ls.
 
-###7: To play the game ........
+###7: To play the game ........ skrifa meira hér
