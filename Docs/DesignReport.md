@@ -2,7 +2,7 @@
 
 ### Tic Tac Toe 
 
-#### TicTacToe is a simple game for two players, X and O who take turns marking the spaces in a 3x3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game. The following example is won by the first player, X:
+TicTacToe is a simple game for two players, X and O who take turns marking the spaces in a 3x3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game. The following example is won by the first player, X:
 
 | O | X | O |
 -------------
