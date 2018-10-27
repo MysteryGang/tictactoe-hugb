@@ -10,19 +10,19 @@
 
 ##### command "install <name of dependency> --save-dev"
 
-##### - clean-webpack-plugin
-##### - html-webpack-plugin
-##### - jest
-##### - supertest
-##### - webpack
-##### - webpack-cli
-##### - webpack-dev-server
+- clean-webpack-plugin
+- html-webpack-plugin
+- jest
+- supertest
+- webpack
+- webpack-cli
+- webpack-dev-server
   
 ##### dependencies
 
 ##### command "install <name of dependency> --save"
-##### - express
-##### - node-fetch
+- express
+- node-fetch
 
 
 ### Heroku steps:
