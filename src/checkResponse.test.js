@@ -2,7 +2,7 @@ const puppeteer = require("puppeteer");
 
 describe("Localhost for tic tac toe", () => {
   let browser, page;
-  let url = "https://ttt-staging-test.herokuapp.com/";
+  let url = "https://my-tictactoe-heroku-deployment.herokuapp.com/";
 
   beforeEach(async () => {
     browser = await puppeteer.launch({ headless: true, slowMo: 0 });
