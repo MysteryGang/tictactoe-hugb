@@ -1,15 +1,15 @@
-## Desting Report for Tic Tac Toe
+## Design Report for Tic Tac Toe
 
 ### Tic Tac Toe 
 
 TicTacToe is a simple game for two players, X and O who take turns marking the spaces in a 3x3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game. The following example is won by the first player, X:
 
 | O | X | O |
--------------
+---
 | X | X | X |
--------------
+---
 | O | O | X |
--------------
+---
 
 ### Coding Method
 
@@ -25,8 +25,6 @@ TicTacToe is a simple game for two players, X and O who take turns marking the s
 ##### When the code is successful you can commit the code.
 
 #### Coding Rules
-
-##### Fleiri coding rules hér
 
 #### Markdown syntax & pair programming
 
