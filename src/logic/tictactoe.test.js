@@ -34,4 +34,4 @@ test("returns draw", () => {
 	var board = ['X', 'O', 'X', 'X', 'O', 'O', 'O', 'X', 'X'];
 	var playerTurn = 10;
 	expect(ttt.winner(board, playerTurn)).toBe('draw');
-})
+});

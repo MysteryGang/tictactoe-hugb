@@ -50,9 +50,8 @@ describe("GET /initializeBoard endpoint", () => {
 		const res = await request(api).get("/initializeBoard");
 		expect(res.status).toBe(200);
 	});
-
 	it("should return board initialized message when called", async () => {
 		const res = await request(api).get("/initializeBoard");
 		expect(ttt.initializeBoard()).toBe("board initialized");
 	})
-})
+});

@@ -41,7 +41,7 @@ function cellClicked(){
                             winnerMessage.innerHTML = body;
                         });
 
-               // update player turn message
+                        // update player turn message
                         fetch("api/currentPlayer")
                         .then(res => res.text())
                         .then(body => {
@@ -57,14 +57,13 @@ function cellClicked(){
 
 function initializeBoard() {
 
-    fetch("/api/initializeBoard/")
+    fetch("/api/initializeBoard/");
 }
 
 function newGame() {
     var button = document.getElementById('new-game-button');
 
     button.onclick = function () {
-        console.log('button clicked');
         window.location.reload();
     }
 }
