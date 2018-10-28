@@ -5,7 +5,7 @@ describe("tic tac toe website", () => {
   let url = "https://my-tictactoe-heroku-deployment.herokuapp.com/";
 
   beforeEach(async () => {
-    browser = await puppeteer.launch({ headless: false, slowMo: 20 });
+    browser = await puppeteer.launch({ headless: true, slowMo: 0 });
     page = await browser.newPage();
   });
 
