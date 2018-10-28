@@ -5,7 +5,7 @@ describe("tic tac toe website", () => {
   let url = "https://my-tictactoe-heroku-deployment.herokuapp.com/";
 
   beforeEach(async () => {
-    browser = await puppeteer.launch({ headless: true, slowMo: 0 });
+    browser = await puppeteer.launch({ headless: true, slowMo: 20 });
     page = await browser.newPage();
   });
 
@@ -15,7 +15,7 @@ describe("tic tac toe website", () => {
   });
   
 
-  test("click a box and then check if it´s innerHTML is 'X'", async () => {
+  test("click a box and then check if winnermessage is sent", async () => {
     await page.goto(url);
     // 1. Click on the left top box on the tic tac toe board, cell-1
       await page.click('#cell-1');
@@ -24,7 +24,7 @@ describe("tic tac toe website", () => {
       await page.click('#cell-5');
       await page.click('#cell-2');
       await page.click('#cell-9');
-      await page.waitFor(1000);
+      await page.waitFor(700);
 
     // 2. Check if the winnermeassage was sent
     const textContent = await page.evaluate(() => document.querySelector('#winner-message').textContent);
