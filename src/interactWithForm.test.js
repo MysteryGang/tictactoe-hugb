@@ -22,13 +22,16 @@ describe("tic tac toe website", () => {
       console.log("clicked cell-1");
       await page.click('#cell-4');
       await page.click('#cell-5');
-      await page.click('#cell-8');
+      await page.click('#cell-2');
       await page.click('#cell-9');
       await page.waitFor(1000);
 
-    // 2. Check if the winnermeassage has turned into 'X wins'
-    if (await page.$('#winner-message') !== "X wins") console.log('winner message sent');
-    else throw "No results found.";
+    // 2. Check if the winnermeassage was sent
+    const textContent = await page.evaluate(() => document.querySelector('#winner-message').textContent);
+    console.log(textContent);
+    
+    if (await page.evaluate(() => document.querySelector('#winner-message').textContent) === 'X wins') console.log('winner message sent');
+    else throw "winner meassage not sent or is wrong.";
   
 
     //Irrelevent comments below
