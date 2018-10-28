@@ -30,7 +30,7 @@ TicTacToe is a simple game for two players, X and O who take turns marking the s
 
 #### Markdown syntax & pair programming
 
-The team used markdown syntax in the documentation. The documentation reports are three and all stored in a folder called docs in the root of the repository. The team also used the agile software development technique pair programming in some cases. Pair programming was an efficient way to solve some problems that came up.
+The team used markdown syntax in the documentation. There are three documentation reports and are stored in a folder called docs in the root of the repository. The team also used the agile software development technique "Pair Programming" in some cases. Pair Programming was an efficient way to solve some problems that came up.
 
 ### Other
 
