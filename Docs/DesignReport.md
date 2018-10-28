@@ -22,7 +22,6 @@ TicTacToe is a simple game for two players, X and O who take turns marking the s
 4. Run tests
 5. Refactor code
 6. Repeat
-
 ##### When the code is successful you can commit the code.
 
 #### Coding Rules
