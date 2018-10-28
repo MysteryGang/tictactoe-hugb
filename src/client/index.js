@@ -39,9 +39,6 @@ function cellClicked(){
                         .then(res => res.text())
                         .then(body => { 
                             winnerMessage.innerHTML = body;
-                            if(body !== ""){
-                                fetch("/api/registerWinner");
-                            }
                         });
 
                         // update player turn message

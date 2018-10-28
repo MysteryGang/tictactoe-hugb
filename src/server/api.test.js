@@ -55,14 +55,3 @@ describe("GET /initializeBoard endpoint", () => {
 		expect(ttt.initializeBoard()).toBe("board initialized");
 	})
 });
-
-describe("GET /registerWinner endpoint", () => {
-	it("should return a 200 OK status code", async () => {
-		const res = await request(api).get("/registerWinner");
-		expect(res.status).toBe(200);
-	});
-	it("should return board initialized message when called", async () => {
-		const res = await request(api).get("/registerWinner");
-		expect(ttt.registerWinner()).toBe(true);
-	})
-});

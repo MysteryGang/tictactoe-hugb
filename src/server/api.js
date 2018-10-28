@@ -23,8 +23,4 @@ router.get("/checkWinner", (req, res) => {
 	res.status(200).send(ttt.checkForWinner());
 });
 
-router.get("/registerWinner", (req, res) => {
-    res.status(200).send(ttt.registerWinner());
-});
-
 module.exports = router;

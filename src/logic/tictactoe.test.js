@@ -35,7 +35,3 @@ test("returns draw", () => {
 	var playerTurn = 10;
 	expect(ttt.winner(board, playerTurn)).toBe('draw');
 });
-
-test("returns true", () => {
-	expect(ttt.registerWinner()).toBe(true);
-});

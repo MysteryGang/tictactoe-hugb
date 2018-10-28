@@ -83,6 +83,7 @@ var winner = function (board, playerTurn) {
 		winner = board[2];
 	}
 	if(winner !== '') {
+		registerWinner();
 		return winner + " wins";
 	}
 	if(playerTurn === 10) {
@@ -96,7 +97,6 @@ var checkForWinner = function() {
 
 var registerWinner = function() {
 	isWinner = true;
-	return isWinner;
 }
 
 module.exports.cellClick = cellClick;
