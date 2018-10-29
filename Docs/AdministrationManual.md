@@ -14,6 +14,5 @@
 - express
 - node-fetch
 
-8. To play the game ........ skrifa meira hér
 
 
