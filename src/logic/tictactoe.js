@@ -11,14 +11,14 @@ var initializeBoard = function() {
 	return 'board initialized';
 }
 
-var checkCell = function(cellid){
+var cellAlreadyClicked = function(cellid){
 
 	var id = getId(cellid);
 
 	if(board[id] == "X" || board[id] == "O"){
-		return "true";
+		return true;
 	}	
-	return "false";
+	return false;
 }
 
 var cellClick = function(cellid){
@@ -28,6 +28,8 @@ var cellClick = function(cellid){
 		var player = returnCurrentPlayer(playerTurn);
 
 		board[id] = player;
+		checkForWinner();
+		
 		playerTurn++;
 		return player;
 	}
@@ -56,43 +58,45 @@ var getId = function (cellid){
 	return id;
 }
 
-var winner = function (board, playerTurn) {
-	var winner = "";
-	if(board[0] === board[1] && board[1] === board[2]) {
-		winner = board[0];
-	}
-	else if(board[3] === board[4] && board[4] === board[5]) {
-		winner = board[3];
-	}
-	else if(board[6] === board[7] && board[6] === board[8]) {
-		winner = board[6];
-	}
-	else if(board[0] === board[3] && board[3] === board[6]) {
-		winner = board[0];
-	}
-	else if(board[1] === board[4] && board[4] === board[7]) {
-		winner = board[1];
-	}
-	else if(board[2] === board[5] && board[5] === board[8]) {
-		winner = board[2];
-	}
-	else if(board[0] === board[4] && board[4] === board[8]) {
-		winner = board[0];
-	}
-	else if(board[2] === board[4] && board[4] === board[6]) {
-		winner = board[2];
-	}
-	if(winner !== '') {
+var checkForWinner = function () {	
+
+	if(cellAlreadyClicked("1") && board[0] === board[1] && board[1] === board[2]) {
 		registerWinner();
-		return winner + " wins";
+		return board[0] + " wins";
 	}
+	if(cellAlreadyClicked("4") && board[3] === board[4] && board[4] === board[5]) {
+		registerWinner();
+		return board[3] + " wins";
+	}
+	if(cellAlreadyClicked("7") &&  board[6] === board[7] && board[6] === board[8]) {
+		registerWinner();
+		return board[6] + " wins";
+	}
+	if(cellAlreadyClicked("1") && board[0] === board[3] && board[3] === board[6]) {
+		registerWinner();
+		return board[0] + " wins";;
+	}
+	if(cellAlreadyClicked("2") && board[1] === board[4] && board[4] === board[7]) {
+		registerWinner();
+		return board[1] + " wins";;
+	}
+	if(cellAlreadyClicked("3") && board[2] === board[5] && board[5] === board[8]) {
+		registerWinner();
+		return board[2] + " wins";;
+	}
+	if(cellAlreadyClicked("1") && board[0] === board[4] && board[4] === board[8]) {
+		registerWinner();
+		return board[0] + " wins";;
+	}
+	if(cellAlreadyClicked("3") && board[2] === board[4] && board[4] === board[6]) {
+		registerWinner();
+		return board[2] + " wins";;
+	}
+
 	if(playerTurn === 10) {
 		return "draw";
 	}
-	return winner;
-}
-var checkForWinner = function() {
-	return winner(board, playerTurn);
+	return "";
 }
 
 var registerWinner = function() {
@@ -102,9 +106,8 @@ var registerWinner = function() {
 module.exports.cellClick = cellClick;
 module.exports.currentPlayer = currentPlayer;
 module.exports.returnCurrentPlayer = returnCurrentPlayer;
-module.exports.checkCell = checkCell;
+module.exports.cellAlreadyClicked = cellAlreadyClicked;
 module.exports.getId = getId;
 module.exports.initializeBoard = initializeBoard;
 module.exports.checkForWinner = checkForWinner;
-module.exports.winner = winner;
 module.exports.registerWinner = registerWinner;
