@@ -36,12 +36,12 @@ describe("GET /checkCell endpoint", () => {
 	});
     it("should return false", async () => {
 		const res = await request(api).get("/checkCell");
-		expect(ttt.checkCell("5")).toBe("false");
+		expect(ttt.cellAlreadyClicked("5")).toBe(false);
 	});
 	it("should return true", async () => {
 		const res = await request(api).get("/checkCell");
 		ttt.cellClick("6"); // "click" the cell
-		expect(ttt.checkCell("6")).toBe("true");
+		expect(ttt.cellAlreadyClicked("6")).toBe(true);
     });
 });
 

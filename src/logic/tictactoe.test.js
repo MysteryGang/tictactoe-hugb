@@ -10,7 +10,12 @@ test("returns player 'O' when playerturn is even number", () => {
 });
 
 test("returns false", () => {
-	expect(ttt.checkCell("1")).toBe("false");
+	expect(ttt.cellAlreadyClicked("1")).toBe(false);
+});
+
+test("returns false", () => {
+	ttt.cellClick("1");
+	expect(ttt.cellAlreadyClicked("1")).toBe(true);
 });
 
 test("returns id of cell", () => {
@@ -25,13 +30,21 @@ test("return message when called", () => {
 	expect(ttt.initializeBoard()).toBe("board initialized");
 });
 
-test("returns correct winner", () => {
-	var board = ['X', 'O', 'O', 'X', 'O', '', 'X', '', ''];
-	expect(ttt.winner(board)).toBe('X wins');
+test("returns X as winner", () => {
+	ttt.cellClick("1");
+	ttt.cellClick("2");
+	ttt.cellClick("4");
+	ttt.cellClick("5");
+	ttt.cellClick("7");
+	expect(ttt.checkForWinner()).toBe('X wins');
 });
 
-test("returns draw", () => {
-	var board = ['X', 'O', 'X', 'X', 'O', 'O', 'O', 'X', 'X'];
-	var playerTurn = 10;
-	expect(ttt.winner(board, playerTurn)).toBe('draw');
+test("returns O as winner", () => {
+	ttt.cellClick("1");
+	ttt.cellClick("2");
+	ttt.cellClick("4");
+	ttt.cellClick("5");
+	ttt.cellClick("6");
+	ttt.cellClick("8");
+	expect(ttt.checkForWinner()).toBe('X wins');
 });
