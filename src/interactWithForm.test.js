@@ -14,7 +14,7 @@ describe("tic tac toe website", () => {
     browser.close();
   });
   
-
+/*
   test("click a box and then check if winnermessage is sent", async () => {
     await page.goto(url);
     // 1. Click on the left top box on the tic tac toe board, cell-1
@@ -24,6 +24,7 @@ describe("tic tac toe website", () => {
       await page.click('#cell-5');
       await page.click('#cell-2');
       await page.click('#cell-9');
+	  await page.click('#cell-3');
       await page.waitFor(700);
 
     // 2. Check if the winnermeassage was sent
@@ -39,4 +40,28 @@ describe("tic tac toe website", () => {
     //NotImplementedError();
     //expect(await page.$('#cell-1').innerHTML).toBe('X');
   });
+  */
+  
+  
+    test("check if whose turn it is changes", async () => {
+    await page.goto(url);
+    // 1. Click on the left top box on the tic tac toe board, cell-1
+      await page.click('#cell-1');
+      console.log("clicked cell-1");
+      await page.waitFor(700);
+
+    // 2. Check if the winnermeassage was sent
+    const textContent = await page.evaluate(() => document.querySelector('#player-turn').textContent);
+    console.log(textContent);
+    
+    if (await page.evaluate(() => document.querySelector('#player-turn').textContent) === 'O, it\'s your turn!') console.log('right turn message sent');
+    else throw "wrong turn message sent";
+  
+
+    //Irrelevent comments below
+    //await page.click('#rso > div:nth-child(1) > div > div:nth-child(1) > div > div > div.r > a:nth-child(1) > h3');
+    //NotImplementedError();
+    //expect(await page.$('#cell-1').innerHTML).toBe('X');
+  });
+  
 });
