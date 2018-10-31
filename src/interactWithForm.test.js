@@ -24,6 +24,7 @@ describe("tic tac toe website", () => {
       await page.click('#cell-5');
       await page.click('#cell-2');
       await page.click('#cell-9');
+	  await page.click('#cell-8');
       await page.waitFor(700);
 
     // 2. Check if the winnermeassage was sent
